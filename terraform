@@ -1,0 +1,27 @@
+timestamps {
+ 
+ node ('NEW_DSOD_Api_buildagent') {
+
+      stage('CleanWorkspace') {
+          cleanWs()
+      }  
+      
+ stage ('git Checkout') {
+		checkout([$class: 'GitSCM',
+		branches: [[name: 'release/main']],
+		doGenerateSubmoduleConfigurations: false,
+		extensions: [],
+		submoduleCfg: [],
+		userRemoteConfigs: [[credentialsId: 'github-2',
+		url: 'https://github.com/iCreateWorks/automerge.git']]])
+    }
+    
+    stage("terraform apply"){
+		sh """
+		terraform init
+		terraform validte
+		terraform apply
+		"""
+	}
+      
+     }
