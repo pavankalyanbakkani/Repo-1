@@ -1,0 +1,3 @@
+[1m[31mError: [0m[0m[1mcreating Amazon S3 (Simple Storage) Bucket (my-s3bucket-20230712021553527500000001): AccessDenied: Access Denied
+22:15:53 status code: 403, request id: G60Z3RN12QH5BHCT, host id: hvQ3vzxs0ZYlJah684mZO5IMddhHW2acE8tQVRtG+iCjQNhdWlGNz6H3AF3u89Kg5UyoXnh5FYw=[0m
+22:15:53
